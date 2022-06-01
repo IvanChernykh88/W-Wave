@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
@@ -43,15 +44,16 @@
             </li>
           </ul>
         </nav>
-        <div class="header__button">
-          <button class="header-button__btn_search" aria-label="Поиск">
+        <form class="search">
+          <button class="search__btn" id="search__btn"  type="submit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </button> 
-          <a class="header-button__link_entrance" href="">Вход</a>
-        </div>
+          </button>
+          <input class="search__input" id="search__input" type="text" tabindex="-1" placeholder="Поиск по сайту">
+        </form>
+        <a class="header-button__link_entrance" href="">Вход</a>
       </div>
       <div class="header-down">
         <ul class="header-down__list">
@@ -675,7 +677,7 @@
                 </div>
               </div>
             </li>
-            <li class="podcast__card podcast_invisible">
+            <li class="podcast__card podcast__card_2 podcast_invisible">
               <div class="podcast-card__img-data">
                 <div class="podcast-card__img"></div>
                 <div class="podcast-card__data">2 июня</div>
@@ -744,7 +746,7 @@
                 </div>
               </div>
             </li>
-            <li class="podcast__card podcast_invisible">
+            <li class="podcast__card podcast__card_2 podcast_invisible">
               <div class="podcast-card__img-data">
                 <div class="podcast-card__img"></div>
                 <div class="podcast-card__data">28 мая</div>
@@ -813,7 +815,7 @@
                 </div>
               </div>
             </li>
-            <li class="podcast__card podcast_invisible">
+            <li class="podcast__card podcast__card_2 podcast_invisible">
               <div class="podcast-card__img-data">
                 <div class="podcast-card__img"></div>
                 <div class="podcast-card__data">22 мая</div>
@@ -882,7 +884,7 @@
                 </div>
               </div>
             </li>
-            <li class="podcast__card podcast_invisible">
+            <li class="podcast__card podcast__card_2 podcast_invisible">
               <div class="podcast-card__img-data">
                 <div class="podcast-card__img"></div>
                 <div class="podcast-card__data">18 мая</div>
@@ -1194,10 +1196,10 @@
               </div>
             </li>
           </ul>
-          <article class="accordion__card-info accordion__card-tabActive" data-target="other">
+          <article class="accordion__card-info" data-target="other">
             <img class="card-info__img" src="img/guests_user.jpg" alt="Гость без фото">
           </article>
-          <article class="accordion__card-info" data-target="olgaMartynova">
+          <article class="accordion__card-info accordion__card-tabActive" data-target="olgaMartynova">
             <img class="card-info__img" src="img/guests_olga.png" alt="Ольга Мартынова">
             <ul class="card-info__list">
               <li class="card-info__item">
@@ -1727,6 +1729,8 @@
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/accordion.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/podcast_btn.js"></script>
   <script src="js/just-validate.min.js"></script>
   <script>
     new window.JustValidate('.form', {

@@ -3,7 +3,8 @@ $( function() {
     icons: false,
     heightStyle: "content",
     collapsible: true,
-    active: false
+    active: false,
+    // animate: false
   });
   document.querySelectorAll('.accordion-item__btn').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
